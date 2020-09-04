@@ -35,10 +35,10 @@ For help getting started with Flutter, view the online [documentation](https://f
 
     async scraper.app(appID: 'com.twitter.android'); 
  
-For an example of how to use it, checkout the example/example_app.dart file  
+For an example of how to use it, checkout the example/main.dart file  
 ```
 
-You can checkout this example app [Example](https://github.com/varamsky/google_play_store_scraper_dart/blob/master/example/example_app.dart).
+You can checkout this example app [Example](https://github.com/varamsky/google_play_store_scraper_dart/blob/master/example/main.dart).
 
 ## Results
 

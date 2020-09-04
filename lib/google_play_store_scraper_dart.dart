@@ -8,7 +8,7 @@ import 'package:web_scraper/web_scraper.dart';
 ///     GooglePlayScraperDart scraper = GooglePlayScraperDart();
 /// 2. Then pass the appID to the app method to get a Future as a map of all the required data for example,
 ///     async scraper.app(appID: 'com.twitter.android')
-/// For an example of how to use it, checkout the example/example_app.dart file
+/// For an example of how to use it, checkout the example/main.dart file
 
 class GooglePlayScraperDart {
   final String domain = 'https://play.google.com';
