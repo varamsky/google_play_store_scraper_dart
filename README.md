@@ -40,7 +40,7 @@ For an example of how to use it, checkout the example/example_app.dart file
 
 You can checkout this example app [Example](https://github.com/varamsky/google_play_store_scraper_dart/blob/master/example/example_app.dart).
 
-##Results
+## Results
 
 ```map
 {
