@@ -40,6 +40,41 @@ For an example of how to use it, checkout the example/example_app.dart file
 
 You can checkout this example app [Example](https://github.com/varamsky/google_play_store_scraper_dart/blob/master/example/example_app.dart).
 
+##Results
+
+```map
+{
+title : Twitter - Apps on Google Play,
+description : Join the conversation! Twitter is your go-to social media app and the source for what's happening in the world. Tweets cover trending topics from world news to local news, celebrity gossip to sports and gaming, politics to fun stories that go viral, if it happens in the world, it is trending now on Twitter. Find friends, share your opinion, gain followers or follow influential people - every voice can impact the world! Join over 2 BILLION users worldwide!Tweet, Retweet, Reply to Tweets, Share or Like all that’s trending now!Retweet, chat privately or go big and initiate a group conversation with your Twitter followers. Get all the social media news in one place - Search hashtags and influencers, chat with friends & other Twitter followers or follow your favorite celebrity alongside hundreds of interesting Twitter users. Read their content & all trending topics at a glance. Engage your social network with noteworthy links, photos and videos. Start microblogging, share your opinion and discover which of your daily Tweets were liked or Retweeted.Create Your Free Twitter Account Today!Twitter allows you to find interesting people or build a following of people who are interested in your opinion. Social networking has never been easier! Twitter allows celebs to build a personal connection and even chat with their fans. This is why Twitter has become one of the most used social media platforms in the world.Build an Engaging Profile*Customize your profile, add a photo, description, location, and background photo*Tweet often, expand your social network and optimize your posting times*Post visual content*Use hashtags in your tweets*Draw in followers from other social media platforms outside of TwitterKnow What’s Trending NowDiscover top trending hashtags, find the latest social media news and celebrity gossip, stories, entertainment and breaking news headlines. Whether you’re interested in sports highlights, pop culture and entertainment or politics, Twitter is your source of information.Live Streaming EventsJoin the conversation or watch live videos to deeply engage with large audiences & influencers directly from your mobile device. Go Live, create your own live streaming events, share videos or sit back and watch events from around the world.Like us on Facebook https://www.facebook.com/TwitterInc/Follow us on Instagram https://www.instagram.com/twitter/?hl=enPrivacy Policy: https://twitter.com/en/privacyTerms and Conditions: https://twitter.com/en/tosWe share device identifying data with some advertising partners which may include app opens that happen prior to signing up. Please see here for more details: https://help.twitter.com/en/safety-and-security/data-through-partnershipsRead ...
+updated : August 31, 2020
+size : Varies with device
+installs : 1,000,000,000+
+ratingsScore : 4.381053447723389
+ratingsScoreText : 4.4
+ratingsCount : 16246546
+price : 0
+free : true
+priceCurrency : USD
+version : Varies with device
+androidVersion : Varies with device
+contentRating : Rated for 12+Parental Guidance Recommended
+developer : Twitter, Inc.
+developerID : Twitter,+Inc.
+developerEmail : google-play-emails@twitter.com
+developerWebsite : https://support.twitter.com/articles/20169915
+developerAddress : Twitter, Inc.
+1355 Market Street, Suite 900
+San Francisco, CA 94103
+privacyPolicy : http://twitter.com/privacy
+genre : News & Magazines
+genreID : NEWS_AND_MAGAZINES
+icon : https://lh3.googleusercontent.com/wIf3HtczQDjHzHuu7vezhqNs0zXAG85F7VmP7nhsTxO3OHegrVXlqIh_DWBYi86FTIGk=s180
+appID : com.twitter.android
+url : https://play.google.com/store/apps/details?id=com.twitter.android&hl=en
+}
+```
+
+
 
 ### Contributions
 
