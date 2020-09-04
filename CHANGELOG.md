@@ -1,3 +1,3 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - Release
 
-* TODO: Describe initial release.
+* A flutter package to scrape data from the Google Play Store.

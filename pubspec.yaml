@@ -2,7 +2,7 @@ name: google_play_store_scraper_dart
 description: A flutter package to scrape data from the Google Play Store.
 version: 0.0.1
 author: Shubham Kumar <shubhamkumar5772@gmail.com>
-homepage:
+homepage: https://github.com/varamsky/google_play_store_scraper_dart
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
