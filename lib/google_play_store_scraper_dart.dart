@@ -10,13 +10,20 @@ import 'package:web_scraper/web_scraper.dart';
 ///     async scraper.app(appID: 'com.twitter.android')
 /// For an example of how to use it, checkout the example/main.dart file
 
+/// GooglePlayScraperDart main class
 class GooglePlayScraperDart {
+  /// domain for the google play website
   final String domain = 'https://play.google.com';
+
+  /// creating a WebScraper object which helps us scrape data from the website
   final WebScraper webScraper = WebScraper('https://play.google.com');
 
+  /// this method returns a Future with a Map of details about the required app from the Play Store
   Future<Map<String, dynamic>> app({String appID}) async {
+    /// defining the end-point of the website
     final String endpoint = '/store/apps/details?id=$appID';
 
+    /// this will contain the final result of the scrapping
     Map<String, dynamic> result = Map<String, dynamic>();
 
     if (await webScraper.loadWebPage(endpoint)) {
@@ -25,11 +32,13 @@ class GooglePlayScraperDart {
       //print(title);
 
       /// grab the description of the app
-      final description = webScraper.getElement('div.W4P4ne', []).first['title'];
+      final description =
+          webScraper.getElement('div.W4P4ne', []).first['title'];
       //print('Description : ${description}');
 
       /// grab all additional info of the app
-      final additionalInfo = webScraper.getElement('div.IQ1z0d > span.htlgb', []);
+      final additionalInfo =
+          webScraper.getElement('div.IQ1z0d > span.htlgb', []);
       //print('\n\n additionalInfo: $additionalInfo\n\n');
 
       final String updated = additionalInfo[0]['title'];
@@ -47,14 +56,18 @@ class GooglePlayScraperDart {
       final String androidVersion = additionalInfo[4]['title'];
       //print('\n\n androidVersion: $androidVersion\n\n');
 
-      final String contentRating = (additionalInfo[5]['title']).split('Learn More')[0];
+      final String contentRating =
+          (additionalInfo[5]['title']).split('Learn More')[0];
       //print('\n\n contentRating: $contentRating\n\n');
 
-      final String developer = additionalInfo[additionalInfo.length - 2]['title'];
+      final String developer =
+          additionalInfo[additionalInfo.length - 2]['title'];
       //print('\n\n developer: $developer\n\n');
 
       /// grab all developer details
-      final devElement = webScraper.getElement('div.hAyfc > span.htlgb > div.IQ1z0d > span.htlgb > div > a', ['href']);
+      final devElement = webScraper.getElement(
+          'div.hAyfc > span.htlgb > div.IQ1z0d > span.htlgb > div > a',
+          ['href']);
       //print('devElement => $devElement');
 
       String developerWebsite, developerEmail, privacyPolicy;
@@ -70,7 +83,6 @@ class GooglePlayScraperDart {
       //print('\n\n developerEmail: $developerEmail\n\n');
       //print('\n\n privacyPolicy: $privacyPolicy\n\n');
 
-
       /// grab the developer address
       final developerAddress = webScraper
           .getElement('div.IQ1z0d > span.htlgb > div', []).last['title'];
@@ -81,7 +93,10 @@ class GooglePlayScraperDart {
       //print('ratingsScoreText: $ratingsScoreText');
 
       final dataFromScripts = webScraper.getAllScripts();
-      String ratingsScore = '', ratingsCount = '', price = '', priceCurrency = '';
+      String ratingsScore = '',
+          ratingsCount = '',
+          price = '',
+          priceCurrency = '';
       bool free = false;
 
       for (var scriptData in dataFromScripts) {
@@ -110,7 +125,8 @@ class GooglePlayScraperDart {
       }
 
       /// grab the genre of the app
-      final genreElement = webScraper.getElement('div.jdjqLd > div.ZVWMWc > div.qQKdcc > span > a', ['href']);
+      final genreElement = webScraper.getElement(
+          'div.jdjqLd > div.ZVWMWc > div.qQKdcc > span > a', ['href']);
       String developerID = '', genre = '', genreID = '';
       //print('\n genreElement: $genreElement\n');
 
@@ -175,6 +191,7 @@ class GooglePlayScraperDart {
         },
       );
     } else {
+      /// if there error in getting access to play store
       print('Cannot load url');
     }
 
