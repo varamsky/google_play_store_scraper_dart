@@ -1,6 +1,7 @@
 # google_play_store_scraper_dart
 
 A flutter package to scrape data from the Google Play Store.
+Inspired by [this](https://github.com/facundoolano/google-play-scraper) project written in JavaScript.
 
 ### Show some :heart: and :star: the repo to support the project
 
