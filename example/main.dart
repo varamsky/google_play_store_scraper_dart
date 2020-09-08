@@ -26,6 +26,16 @@ class MyApp extends StatelessWidget {
           body: FutureBuilder(
             /// call to scraper.app() method with the appID of the required app for example, com.twitter.android
             future: scraper.app(appID: 'com.twitter.android'),
+
+            //future: scraper.app(appID: 'com.tencent.ig',gl: 'ch'),
+            // Here, I have added the optional [gl] argument to the app() method.
+            // The [gl] attribute lets you specify the Geographical Location for the app search on the Play Store
+            // By default the value of [gl] is "in" i.e, the Geographical Location of India
+            // And at the time of this update 'com.tencent.ig' i.e, the PubG app was banned in India and not available on the Play Store
+            // Therefore, not using the " gl: 'ch' " attribute resulted on unwanted result.
+            // For such app-availability issues you must use the [gl] argument for a specific Geographic Location
+            // for example, "in" => India, "us" => USA, "ch" => China, "uk" => United Kingdom and so on..
+
             builder: (BuildContext context, AsyncSnapshot snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
                 return (snapshot.hasData)
