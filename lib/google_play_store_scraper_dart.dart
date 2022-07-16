@@ -1,6 +1,5 @@
 library google_play_store_scraper_dart;
 
-import 'package:flutter/material.dart';
 import 'package:web_scraper/web_scraper.dart';
 
 /// A flutter package to scrape data from the Google Play Store
@@ -26,7 +25,7 @@ class GooglePlayScraperDart {
   /// You can provide any Geographical Location you want
   /// for example, "in" => India, "us" => USA, "ch" => China, "uk" => United Kingdom and so on..
   Future<Map<String, dynamic>> app(
-      {@required String appID, String gl = 'in'}) async {
+      {required String appID, String gl = 'in'}) async {
     /// defining the end-point of the website
     final String endpoint = '/store/apps/details?id=$appID&gl=$gl';
 
@@ -78,7 +77,9 @@ class GooglePlayScraperDart {
             ['href']);
         //print('devElement => $devElement');
 
-        String developerWebsite, developerEmail, privacyPolicy;
+        String? developerWebsite;
+        String? developerEmail;
+        String? privacyPolicy;
 
         for (int i = 0; i < devElement.length; i++) {
           if (devElement[i]['title'] == 'Visit website') {
